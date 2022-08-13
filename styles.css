@@ -1,0 +1,22 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+input{
+    display: block;
+    margin: 10px 310px;
+    padding: 0.5rem 0.5rem;
+}
+label{
+    display: block;
+}
+button{
+    padding: 0.5rem 0.5rem;
+}
+.d-none{
+    display: none;
+}
