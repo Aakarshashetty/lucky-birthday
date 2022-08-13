@@ -1,22 +1,67 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: url("img/background.jpg");
+    /* width: 100%; */
+    background-size: 1375px 657px;
+    background-repeat: no-repeat;
+    margin: 10px 0px;
+    color: #90e0ef;
 }
 .container{
-    max-width: 800px;
+    max-width: 60%;
     margin: auto;
     text-align: center;
 }
 input{
     display: block;
-    margin: 10px 310px;
-    padding: 0.5rem 0.5rem;
+    width: 30%;
+    text-align: center;
+    margin: 10px 270px; 
+    padding: 1rem 0.8rem;
+    cursor: pointer;
+    background: transparent;
+    color: #90e0ef;
+    font-size: medium;
+    border: 2px solid #90e0ef;
+    border-radius: 0.5rem;
 }
 label{
     display: block;
+    font-size: large;
 }
 button{
     padding: 0.5rem 0.5rem;
 }
 .d-none{
     display: none;
+}
+h1{
+    text-align: center;
+    padding: 3rem 0rem;
+    background-image: linear-gradient(to left,#caf0f8, #ade8f4, #90e0ef,#48cae4, #00b4d8, #0077b6, #023e8a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+input:hover{
+    background: white;
+    color: #0077b6;
+    border: 2px solid #0077b6;
+}
+input:focus{
+    outline: none;
+}
+button{
+    background: transparent;
+    color: #90e0ef;
+    border: 2px solid #90e0ef;
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+}
+button:hover{
+    background: transparent;
+    color: #0077b6;
+    border: 2px solid #0077b6;
+}
+.output{
+    color: #0077b6;
 }

@@ -3,28 +3,34 @@ const luckyNo = document.querySelector('.luckyNo');
 const output = document.querySelector('.output');
 const button = document.querySelector('button');
 
-let myFunc = num => Number(num);
-const dateArray = Array.from(String(dob.value), myFunc);
-//console.log(dateArray);
-const displayOutput = (res) =>{
+const calculateBithdayLucky = () =>{
+    const sum = calculateSum(dob.value); 
+    console.log(sum, luckyNo.value);
     output.style.display = "block";
-    if(res % luckyNo.value === 0){
-        let html = `<h2>${luckyNo.value} is a lucky number!!</h2>`;
+    if(sum&&luckyNo.value !== null){
+    compare(sum, luckyNo.value);
+    }else{
+        output.innerText = "Please enter valid Input🙂"
+    }
+}
+const calculateSum = (birthdate) => {
+    let sum = 0;
+    birthdate = birthdate.replaceAll("-","");
+    for(let i = 0;i < birthdate.length; i++){
+        sum += Number(birthdate.charAt(i));
+    }
+    return sum;
+}
+const compare = (sum, lucky) => {
+    if(sum % lucky === 0){
+        console.log("divisible");
+        let html = `<h2>${lucky} is a lucky number 🤩</h2>`;
         output.innerHTML = html;
     }else{
-        let html = `<h2>${luckyNo.value} is not that lucky<h2>`;
+        console.log("not divisible");
+        let html = `<h2>${lucky} is not that lucky, make your own luck 😎<h2>`;
         output.innerHTML = html;
     }
 }
-
-button.addEventListener('click', (e) => {
-    const res = dateArray.reduce((acc, curr) => {
-        acc += curr;
-        console.log(acc);
-        return acc;
-    },0);
-    //console.log(res);
-    displayOutput(res);
-    //console.log("clicked!");
-});
+button.addEventListener('click', calculateBithdayLucky);
 
