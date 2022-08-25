@@ -65,3 +65,30 @@ button:hover{
 .output{
     color: #0077b6;
 }
+.footer .link{
+    color: #90e0ef;
+    padding: 0.5rem 0.5rem;
+    border: 1.5px solid #0077b6;
+    border-radius: 10rem;
+    margin: 3px
+}
+.footer ul{
+    padding-inline-start: 0px;
+}
+.footer-insider{
+    font-weight: bold;
+    font-size: large;
+    padding-bottom: 1rem;
+    color: #0077b6;
+}
+.footer{
+    padding: 0rem 1rem;
+    margin: 0px 0px;
+    margin-top: 70px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+.footer .link:hover{
+    background-color: #90e0ef;
+    color: #0077b6;
+}
