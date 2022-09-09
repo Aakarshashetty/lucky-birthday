@@ -7,7 +7,7 @@ const calculateBithdayLucky = () =>{
     const sum = calculateSum(dob.value); 
     console.log(sum, luckyNo.value);
     output.style.display = "block";
-    if(sum&&luckyNo.value !== null){
+    if((sum&&luckyNo.value !== null) && luckyNo.value>0){
     compare(sum, luckyNo.value);
     }else{
         output.innerText = "Please enter valid Input🙂"
